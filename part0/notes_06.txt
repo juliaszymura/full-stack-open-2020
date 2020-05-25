@@ -1,0 +1,19 @@
+title Posting a note to Single Page Application
+
+note over browser:
+user fills note content and clicks save
+browser starts executing event handler 
+that sends new note to server
+end note
+
+browser->server: HTTP POST https://fullstack-exampleapp.herokuapp.com/new_note_spa
+note over server:
+server creates note and responds 
+with status code 201 Created
+end note
+server-->browser: {"message": "note created"}
+
+note over browser:
+browser executes js-code 
+that updates displayed notes
+end note

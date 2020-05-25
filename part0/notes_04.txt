@@ -1,0 +1,54 @@
+title Posting a note
+
+note over browser:
+user fills note content and clicks save
+browser starts executing event handler that sends 
+new note to server
+end note
+
+browser->server: HTTP POST https://fullstack-exampleapp.herokuapp.com/new_note
+note over server:
+server creates note and responds 
+with a status code 302 Found and 
+/notes in Location response header 
+end note
+server-->browser:
+
+note over browser:
+browser redirects to the address
+in Location response header
+end note
+
+browser->server: HTTP GET https://fullstack-exampleapp.herokuapp.com/notes
+server-->browser: notes HTML document
+
+note over browser:
+browser reads HTML document
+link tag and requests main.css
+end note
+
+browser->server: HTTP GET https://fullstack-exampleapp.herokuapp.com/main.css
+server-->browser: main.css
+
+note over browser:
+browser reads HTML document
+script tag and requests main.js
+end note
+
+browser->server: HTTP GET https://fullstack-exampleapp.herokuapp.com/main.js
+server-->browser: main.js
+
+note over browser:
+browser starts executing received js-code
+that requests JSON data from server 
+end note
+
+
+browser->server: HTTP GET https://fullstack-exampleapp.herokuapp.com/data.json
+server-->browser: [{ content: "HTML is easy", date: "2019-05-23" }, ...]
+
+note over browser:
+browser executes the event handler
+that renders notes to display
+end note
+
