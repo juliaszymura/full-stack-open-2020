@@ -1,0 +1,10 @@
+POST http://localhost:3003/api/blogs HTTP/1.1
+content-type: application/json
+authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImphbnVzejE5OTkiLCJpZCI6IjVlZjExZjdlODUxOGM2MTE1YTA3NThiNCIsImlhdCI6MTU5Mjg2NDU5OH0.eJ_c9Xvel_Q7ouuL1F6eNnrXUSpVWTDu_hD6w8orsd8
+
+{
+  "title": "Herp Herp",
+  "author": "Derp Herp",
+  "url": "https://derpina.com",
+  "likes": "1337"
+}
