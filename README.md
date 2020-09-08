@@ -56,4 +56,5 @@ This part also contains E2E tests that use Cypress.io.
 
 ### Part 6 - State management with Redux
 
-Improved version of Anecdotes app from part 1. Instead of showing selected anedotes it displays all of them. This implementation uses Redux with hooks.
+- Unicafe-redux - simplified version of Unicafe from part 1.
+- Anecdotes-redux - improved version of Anecdotes app from part 1. Instead of showing selected anedotes it displays all of them.
