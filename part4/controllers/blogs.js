@@ -62,4 +62,22 @@ blogsRouter.put("/:id", async (request, response) => {
   }
 });
 
+blogsRouter.post("/:id/comments", async (request, response) => {
+  const id = request.params.id;
+  const body = request.body;
+  const blog = await Blog.findById(id);
+  const commentedBlog = {
+    // ...blog, because destructuring causes error obj.toObj not a function
+    autor: blog.author,
+    title: blog.title,
+    user: blog.user,
+    url: blog.url,
+    comments: blog.comments.concat(`${body.comment}`),
+  };
+  const updatedBlog = await Blog.findByIdAndUpdate(id, commentedBlog, {
+    new: true,
+  });
+  response.json(updatedBlog);
+});
+
 module.exports = blogsRouter;

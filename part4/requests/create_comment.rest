@@ -1,0 +1,8 @@
+@id = 5efcb2152c34fa559363b064
+
+POST http://localhost:3003/api/blogs/{{id}}/comments HTTP/1.1
+content-type: application/json
+
+{
+  "comment" : "test"
+}

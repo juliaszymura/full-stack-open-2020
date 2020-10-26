@@ -219,6 +219,43 @@ describe("Updating blogs", () => {
   });
 });
 
+describe("Commenting blogs", () => {
+  test("Server saves new comment in database", async () => {
+    const res = await api.get("/api/blogs");
+    const [lastBlog] = res.body.slice(-1);
+    const comment = { comment: "great blog!" };
+
+    await api
+      .post(`/api/blogs/${lastBlog.id}/comments`)
+      .set("Accept", "application/json")
+      .send(comment);
+
+    const blogs = await testHelper.blogsInDB();
+    const savedBlog = blogs.find((blog) => blog._id.toString() === lastBlog.id);
+
+    expect(savedBlog.comments).toHaveLength(1);
+    expect(savedBlog.comments[0]).toBe(comment.comment);
+  });
+  test("Server responds with updated bloglist", async () => {
+    const res = await api.get("/api/blogs");
+    const [lastBlog] = res.body.slice(-1);
+    const comment = { comment: "great blog!" };
+
+    const response = await api
+      .post(`/api/blogs/${lastBlog.id}/comments`)
+      .set("Accept", "application/json")
+      .send(comment);
+
+    expect(response.body).toHaveProperty("author", lastBlog.author);
+    expect(response.body).toHaveProperty("id", lastBlog.id);
+    expect(response.body).toHaveProperty("user");
+    expect(response.body).toHaveProperty("title", lastBlog.title);
+    expect(response.body).toHaveProperty("url", lastBlog.url);
+    expect(response.body).toHaveProperty("likes", lastBlog.likes);
+    expect(response.body).toHaveProperty("comments", [comment.comment]);
+  });
+});
+
 afterAll(() => {
   mongoose.connection.close();
 });
