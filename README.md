@@ -58,3 +58,12 @@ This part also contains E2E tests that use Cypress.io.
 
 - Unicafe-redux - simplified version of Unicafe from part 1.
 - Anecdotes-redux - improved version of Anecdotes app from part 1. Instead of showing selected anedotes it displays all of them.
+
+---
+
+### Part 7 - React router, custom hooks, styling app with CSS and webpack
+
+- Routed-anecdotes - Anecdotes app that use React Router.
+- Country-hook - simplified version od Countries app from part 2 that implements a custom hook to fetch country info.
+- Ultimate-hooks - mix of Notes and Phonebook apps. Uses a custom hook to manage resources.
+- Bloglist - improved version of the app from part 5 that uses backend from part 4. Uses Redux, React Router and Material-ui.
