@@ -1,0 +1,17 @@
+@id = d2773822-f723-11e9-8f0b-362b9e155667
+
+POST http://localhost:3001/api/patients/{{id}}/entries
+Content-Type: application/json
+
+{
+  "date": "2019-08-05",
+  "type": "OccupationalHealthcare",
+  "specialist": "Dr. Remy Hadley",
+  "employerName": "HyPD",
+  "diagnosisCodes": ["L20", "F43.2", "L60.1"],
+  "description":  "Patient doesn't feel well and seems sick.",
+  "sickLeave": {
+    "startDate": "2019-08-05",
+    "endDate": "2019-09-28"
+    }
+}

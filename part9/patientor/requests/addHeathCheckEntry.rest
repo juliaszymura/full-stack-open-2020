@@ -1,0 +1,12 @@
+@id = d2773822-f723-11e9-8f0b-362b9e155667
+
+POST http://localhost:3001/api/patients/{{id}}/entries
+Content-Type: application/json
+
+{    
+  "date": "2020-04-10",
+  "specialist": "DR Quinn",
+  "type": "HealthCheck",
+  "description": "SARS-CoV-2 infection, needs to isolate for next 14 days.",
+  "healthCheckRating": 3 
+}

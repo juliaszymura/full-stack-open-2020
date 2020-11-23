@@ -1,0 +1,10 @@
+POST http://localhost:3001/api/patients
+Content-Type: application/json
+
+  {
+    "name": "Linus Torvalds",
+    "dateOfBirth": "1969-12-28",
+    "ssn": "TTAE86-1337",
+    "gender": "male",
+    "occupation": "Software developer"
+  }

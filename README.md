@@ -67,3 +67,14 @@ This part also contains E2E tests that use Cypress.io.
 - Country-hook - simplified version od Countries app from part 2 that implements a custom hook to fetch country info.
 - Ultimate-hooks - mix of Notes and Phonebook apps. Uses a custom hook to manage resources.
 - Bloglist - improved version of the app from part 5 that uses backend from part 4. Uses Redux, React Router and Material-ui.
+
+---
+
+### Part 9 - Typescript
+
+- Calculators - CLI and web BMI and excercise calculators.
+- Courseinfo - similar to courseinfo from part 1.
+
+**Patientor**
+
+Patientor is a simple medical record application for doctors who handle diagnoses and basic health information of their patients. Backend is an express app that stores all data in memory. Frontend is a forked project that can be found here: https://github.com/juliaszymura/patientor
