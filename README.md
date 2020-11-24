@@ -75,6 +75,6 @@ This part also contains E2E tests that use Cypress.io.
 - Calculators - CLI and web BMI and excercise calculators.
 - Courseinfo - similar to courseinfo from part 1.
 
-**Patientor**
+**Patientor - https://serene-atoll-98759.herokuapp.com/**
 
 Patientor is a simple medical record application for doctors who handle diagnoses and basic health information of their patients. Backend is an express app that stores all data in memory. Frontend is a forked project that can be found here: https://github.com/juliaszymura/patientor
