@@ -2,6 +2,19 @@
 
 This repo contains solutions to Full stack open 2020 exerises. The course can be found here: https://fullstackopen.com/en/.
 
+Live projects - might take a few seconds for sleeping dynos to run:
+
+- Phonebook (part 3) - https://murmuring-everglades-53483.herokuapp.com/
+- Bloglist (part 4, 5 & 7) - https://fierce-crag-48813.herokuapp.com/
+- Patientor (part 9) - https://serene-atoll-98759.herokuapp.com/
+
+To log into bloglist app try these credentials:
+
+```
+username: fullstack
+password: open
+```
+
 ---
 
 ### Part 0 - Fundamentals of Web apps
@@ -66,7 +79,10 @@ This part also contains E2E tests that use Cypress.io.
 - Routed-anecdotes - Anecdotes app that use React Router.
 - Country-hook - simplified version od Countries app from part 2 that implements a custom hook to fetch country info.
 - Ultimate-hooks - mix of Notes and Phonebook apps. Uses a custom hook to manage resources.
-- Bloglist - improved version of the app from part 5 that uses backend from part 4. Uses Redux, React Router and Material-ui.
+
+**Bloglist - https://fierce-crag-48813.herokuapp.com/**
+
+Improved version of the app from part 5 that uses backend from part 4. Uses Redux, React Router and Material-ui.
 
 ---
 
